@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Emploi du Temps - IAIL S2</title>
+    <style>
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 40px; 
+            background-color: #f4f7f6; 
+            color: #333;
+        }
+        h2 { 
+            text-align: center; 
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+        }
+        .info-header {
+            background-color: #ffffff;
+            padding: 20px;
+            border-left: 5px solid #2c3e50;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            font-size: 1.1em;
+        }
+        .info-header span {
+            font-weight: bold;
+        }
+        table { 
+            width: 100%; 
+            border-collapse: collapse; 
+            background: white; 
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td { 
+            border: 1px solid #e0e0e0; 
+            padding: 12px; 
+            text-align: center; 
+            font-size: 0.9em; 
+            line-height: 1.5;
+            vertical-align: top;
+        }
+        th { 
+            background-color: #284b6b; 
+            color: white; 
+            text-transform: uppercase;
+            font-size: 0.85em;
+        }
+        .day-column { 
+            font-weight: bold; 
+            background-color: #edf2f7; 
+            width: 100px;
+            color: #2c3e50;
+            vertical-align: middle;
+        }
+        .tp-red { 
+            color: #e53e3e; 
+            font-weight: bold; 
+            display: block;
+            margin-top: 5px;
+        }
+        .print-btn {
+            display: block;
+            width: 150px;
+            margin: 30px auto;
+            padding: 10px;
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        @media print {
+            .print-btn { display: none; }
+            body { margin: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="info-header">
+        <div>Nom et Prénom : <span>Bahdir Khalid</span></div>
+        <div>Filière : <span>IAIL-S2</span></div>
+        <div>Groupe : <span>1</span></div>
+    </div>
+
+    <h2>Emploi Du Temps « Provisoire » — IAIL- S2</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Jours</th>
+                <th>9h À 10h30</th>
+                <th>10h30 À 12h</th>
+                <th>12h15 À 13h45</th>
+                <th>13h45 À 15h15</th>
+                <th>15h30 À 17h</th>
+                <th>17h À 18h30</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="day-column">Lundi</td>
+                <td>Programmation Python 2<br>Prof M.Laraqui<br>Cours - Amphi A</td>
+                <td>Algorithmes et Programmation C 2<br>Prof H.Oudani<br>Cours - Amphi A</td>
+                <td></td>
+                <td>Algorithmes et Programmation C 2<br><span class="tp-red">Td/Tp Grp1 - Salle P2</span><br>Prof H.Oudani</td>
+                <td>Programmation Python 2<br><span class="tp-red">Td/Tp Grp 3 - Salle P2</span><br>Prof A.Elouardi</td>
+                <td>Programmation Python 2<br><span class="tp-red">Td/Tp Grp 2 - Salle P2</span><br>Prof A.Elouardi</td>
+            </tr>
+            <tr>
+                <td class="day-column">Mardi</td>
+                <td>Programmation Python 2<br><span class="tp-red">Td/Tp Grp 1 - Salle P2</span><br>Prof A.Elouardi</td>
+                <td></td>
+                <td>Digital Skills & IA<br>Cours — Amphi A<br>Prof A. Elouardi</td>
+                <td>Digital Skills & IA<br>Td/Tp — Amphi A<br>Prof A. Elouardi</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="day-column">Mercredi</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Algorithmes et Programmation C 2<br><span class="tp-red">Td/Tp Grp2 - Salle P2</span><br>Prof H.Oudani</td>
+                <td>Algèbre 2<br>TD — Amphi A<br>Prof I. Boutaayamo</td>
+                <td>Analyse 2<br>Td — Amphi A<br>Prof A.Hadri</td>
+            </tr>
+            <tr>
+                <td class="day-column">Jeudi</td>
+                <td>Traitement Du Signal<br>Cours — Amphi A<br>Prof H.Azzahhafi</td>
+                <td>Traitement Du Signal<br>TD — Amphi A<br>Prof H.Azzahhafi</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="day-column">Vendredi</td>
+                <td>Algèbre 2<br>Cours — Amphi C<br>Prof I. Boutaayamo</td>
+                <td>Analyse 2<br>Cours — Amphi C<br>Prof A.Hadri</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="day-column">Samedi</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Programmation Web 1<br><span class="tp-red">Td/Tp G2 - Salle P2</span><br>Prof A.Hakem</td>
+                <td>Programmation Web 1<br>Cours — Salle P1<br>Prof K.Omari</td>
+                <td>Programmation Web 1<br><span class="tp-red">Td/Tp G1 - Salle P2</span><br>Prof K.Omari</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
